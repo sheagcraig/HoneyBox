@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<style type="text/css">
+			body {
+				font-family: 'Helvetica', sans-serif;
+				background-color: #FFFFFF;
+			}
+			.content {
+				font-size: 10pt;
+		  }
+			.formbox{
+				display: inline-block;
+				position: relative;
+				background-color: #EEFFEE;
+				width: 400px;
+				margin: 10px;
+				padding: 20px;
+		  }
+			.textbox{
+				width: 400px;
+				margin: 10px;
+				padding: 20px;
+				font-size: 10pt;
+		  }
+		</style>
+  </head>
+	<body>
+		<div class='container'>
+			<div class='content'>
+				<div class='textbox'>
+					<p><h1>The HoneyBox</h1></p>
+					<p>Generate box plots from a csv (comma-delimited) file with Pygal.</p>
+				</div>
+				<div class='formbox'>
+					<p><h2>HoneyBox</h2></p>
+					<p>The csv file should be formatted with one row per line. The first field should be the title to be used in the final graph. The remaining fields should be the data points.</p>
+					<form action="HoneyBox.py/web_box" method="POST" enctype="multipart/form-data">
+						<table>
+							<tr>
+								<td>Title:</td><td><input type="text" name="title"></td>
+							</tr>
+							<tr>
+								<td>Data File:</td><td><input type="file" name="file"></td>
+							</tr>
+							<tr>
+								<td><input type="submit"><td>
+							</tr>
+						</table>
+					</form>
+				</div>
+		</div>
+	</body>
+</html>
